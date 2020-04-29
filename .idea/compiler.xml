@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,6 +14,7 @@
         <module name="gmall-oms" />
         <module name="gmall-pms" />
         <module name="gmall-sms" />
+        <module name="gmall-sms-interface" />
         <module name="gmall-ums" />
         <module name="gmall-wms" />
       </profile>
