@@ -9,6 +9,7 @@ import com.atguigu.gmall.pms.vo.BaseAttrVO;
 import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.vo.SpuInfoVO;
 import com.atguigu.gmall.sms.vo.SkuSaleVO;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,7 +92,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public void bigSave(SpuInfoVO spuInfoVO) {
         /**
          * 1.保存spu相关的3张表
@@ -178,16 +179,6 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
             this.attrValueService.saveBatch(attrValueEntities);
         }
     }
-
-/*    private void saveSpuInfoDesc(SpuInfoVO spuInfoVO, Long spuId) {
-        List<String> spuImages = spuInfoVO.getSpuImages();
-        if (!CollectionUtils.isEmpty(spuImages)){
-            SpuInfoDescEntity descEntity = new SpuInfoDescEntity();
-            descEntity.setSpuId(spuId);
-            descEntity.setDecript(StringUtils.join(spuImages,","));
-            this.descDao.insert(descEntity);
-        }
-    }*/
 
     private Long saveSpuInfo(SpuInfoVO spuInfoVO) {
         spuInfoVO.setCreateTime(new Date());
