@@ -13,6 +13,15 @@ spring:
 
   redis:
     host: 192.168.56.10
+  rabbitmq:
+    host: 192.168.56.10
+    port: 5672
+    virtual-host: /qiao
+    username: qiao
+    password: qiao
+item:
+  rabbitmq:
+    exchange: GMALL-PMS-EXCHANGE
 mybatis-plus:
   global-config:
     db-config:
