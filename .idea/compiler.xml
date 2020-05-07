@@ -8,12 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gmall-admin" />
+        <module name="gmall-auth" />
+        <module name="gmall-cart" />
+        <module name="gmall-cart-interface" />
         <module name="gmall-core" />
         <module name="gmall-gateway" />
         <module name="gmall-generator" />
         <module name="gmall-index" />
         <module name="gmall-item" />
         <module name="gmall-oms" />
+        <module name="gmall-oms-interface" />
+        <module name="gmall-order" />
         <module name="gmall-pms" />
         <module name="gmall-pms-interface" />
         <module name="gmall-search" />
@@ -21,6 +26,7 @@
         <module name="gmall-sms-interface" />
         <module name="gmall-snote" />
         <module name="gmall-ums" />
+        <module name="gmall-ums-interface" />
         <module name="gmall-wms" />
         <module name="gmall-wms-interface" />
       </profile>
@@ -32,12 +38,15 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gmall-admin" options="-parameters" />
+      <module name="gmall-auth" options="-parameters" />
+      <module name="gmall-cart" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
       <module name="gmall-item" options="-parameters" />
       <module name="gmall-note" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
+      <module name="gmall-order" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-search" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
