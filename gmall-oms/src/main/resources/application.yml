@@ -12,6 +12,11 @@ spring:
     password: 091523
   redis:
     host: 192.168.56.10
+  rabbitmq:
+    host: 192.168.56.10
+    virtual-host: /qiao
+    username: qiao
+    password: qiao
 mybatis-plus:
   global-config:
     db-config:

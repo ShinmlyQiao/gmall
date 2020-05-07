@@ -228,7 +228,7 @@ public class OrderService {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
         scheduledExecutorService.scheduleAtFixedRate(() -> {
             System.out.println("这是一个定时任务");
-        }, 10l, 20l, TimeUnit.SECONDS);
+        }, 10L, 20L, TimeUnit.SECONDS);
     }
 
 }
