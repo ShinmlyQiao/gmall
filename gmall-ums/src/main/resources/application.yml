@@ -10,6 +10,12 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/guli_ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 091523
+
+  rabbitmq:
+    host: 192.168.56.10
+    username: qiao
+    password: qiao
+    virtual-host: /qiao
   redis:
     host: 192.168.56.10
 mybatis-plus:
@@ -17,3 +23,4 @@ mybatis-plus:
     db-config:
       id-type: auto
   mapper-locations: classpath:mapper/ums/**/*.xml
+

@@ -1,0 +1,18 @@
+server:
+  port: 8079
+spring:
+  application:
+    name: snote-service
+  rabbitmq:
+    host: 192.168.56.10
+    username: qiao
+    password: qiao
+    virtual-host: /qiao
+  redis:
+    host: 192.168.56.10
+gmall:
+  snote:
+    accessKeyId: LTAI4G1RVmPbSfdRDH4au6Vv
+    accessKeySecret: 9qTVQSOUU599jXVGgycwT4eiDu7bVA
+    signName: π»¡£…Ã≥«Plus
+    verifyCodeTemplate: SMS_189617658

@@ -1,8 +1,6 @@
 package com.atguigu.gmall.ums.controller;
 
 import java.util.Arrays;
-import java.util.Map;
-
 
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.atguigu.gmall.ums.entity.MemberEntity;
 import com.atguigu.gmall.ums.service.MemberService;
-
-
 
 
 /**
@@ -32,6 +28,32 @@ import com.atguigu.gmall.ums.service.MemberService;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @GetMapping("query")
+    public Resp<MemberEntity> queryUser(@RequestParam("username")String username, @RequestParam("password")String password){
+        MemberEntity memberEntity = this.memberService.queryUser(username, password);
+        return Resp.ok(memberEntity);
+    }
+
+    @PostMapping("register")
+    public Resp<Object> register(MemberEntity memberEntity, @RequestParam("code")String code){
+        this.memberService.register(memberEntity, code);
+        return Resp.ok(null);
+    }
+
+    @GetMapping("check/{data}/{type}")
+    public Resp<Boolean> checkData(@PathVariable("data")String data, @PathVariable("type")Integer type){
+
+        Boolean flag = this.memberService.checkData(data, type);
+        return Resp.ok(flag);
+    }
+
+    @PostMapping("code")
+    public Resp<Object> sendVerifyCode(@RequestParam("phone")String phone){
+        this.memberService.sendVerifyCode(phone);
+        return Resp.ok(null);
+    }
+
 
     /**
      * 列表

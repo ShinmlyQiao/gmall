@@ -56,6 +56,7 @@ public interface GmallPmsApi {
 
     @GetMapping("pms/attrgroup/item/group/{cid}/{spuId}")
     public Resp<List<ItemGroupVO>> queryItemGroupVOByCidAndSpuId(@PathVariable("cid")Long cid, @PathVariable("spuId")Long spuId);
+
     @GetMapping("pms/spuinfodesc/info/{spuId}")
     public Resp<SpuInfoDescEntity> querySpuDescBySpuId(@PathVariable("spuId") Long spuId);
 }

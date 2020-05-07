@@ -16,5 +16,13 @@ import com.atguigu.core.bean.QueryCondition;
 public interface MemberService extends IService<MemberEntity> {
 
     PageVo queryPage(QueryCondition params);
+
+    Boolean checkData(String data, Integer type);
+
+    void register(MemberEntity memberEntity, String code);
+
+    MemberEntity queryUser(String username, String password);
+
+    void sendVerifyCode(String phone);
 }
 

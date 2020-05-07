@@ -12,17 +12,22 @@
         <module name="gmall-gateway" />
         <module name="gmall-generator" />
         <module name="gmall-index" />
+        <module name="gmall-item" />
         <module name="gmall-oms" />
         <module name="gmall-pms" />
         <module name="gmall-pms-interface" />
         <module name="gmall-search" />
         <module name="gmall-sms" />
         <module name="gmall-sms-interface" />
+        <module name="gmall-snote" />
         <module name="gmall-ums" />
         <module name="gmall-wms" />
         <module name="gmall-wms-interface" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gmall-note" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -30,10 +35,13 @@
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
+      <module name="gmall-item" options="-parameters" />
+      <module name="gmall-note" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-search" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
+      <module name="gmall-snote" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />
       <module name="gmall-wms" options="-parameters" />
     </option>
